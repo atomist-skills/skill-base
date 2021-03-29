@@ -16,12 +16,12 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Install node and npm
+# Install Node and NPM
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get -y install nodejs && \
     rm -rf /var/lib/apt/lists/*
 
-# Install latest versio of the Atomist cli
+# Install latest versio of the Atomist CLI
 RUN npm install -g @atomist/skill \
     && rm -rf /root/.npm/
     
