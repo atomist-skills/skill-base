@@ -21,7 +21,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get -y install nodejs && \
     rm -rf /var/lib/apt/lists/*
 
-# Install latest versio of the Atomist CLI
+# Install latest version of the Atomist CLI
 RUN npm install -g @atomist/skill \
     && rm -rf /root/.npm/
     
