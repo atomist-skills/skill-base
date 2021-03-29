@@ -25,7 +25,6 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
 RUN npm install -g @atomist/skill \
     && rm -rf /root/.npm/
     
-
 WORKDIR "/atm/home"
 
 ENTRYPOINT ["atm-skill"]
