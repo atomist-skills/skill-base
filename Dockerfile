@@ -27,4 +27,5 @@ RUN npm install -g @atomist/skill \
     
 WORKDIR "/atm/home"
 
+# Define the entrypoint
 ENTRYPOINT ["atm-skill"]
