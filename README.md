@@ -11,6 +11,7 @@ FROM atomist/skill:node14
 ```
 
 Use the `atomist/docker-base-image-policy` to pin the `FROM` to latest digests. 
+
 ---
 
 Created by [Atomist][atomist]. Need Help? [Join our Slack workspace][slack].
