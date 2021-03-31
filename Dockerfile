@@ -8,6 +8,7 @@ ENV NPM_CONFIG_LOGLEVEL warn
 ENV SUPPRESS_NO_CONFIG_WARNING true
 
 EXPOSE 80/tcp
+EXPOSE 443/tcp
 
 # Install some common packages
 RUN apt-get update && apt-get install -y \
