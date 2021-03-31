@@ -6,7 +6,6 @@ ENV NODE_ENV production
 ENV NODE_NO_WARNINGS 1
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV SUPPRESS_NO_CONFIG_WARNING true
-ENV FOO bar
 
 # Install some common packages
 RUN apt-get update && apt-get install -y \
