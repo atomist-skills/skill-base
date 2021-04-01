@@ -16,5 +16,5 @@ Use the `atomist/docker-base-image-policy` to pin the `FROM` to latest digests.
 
 Created by [Atomist][atomist]. Need Help? [Join our Slack workspace][slack].
 
-[atomist]: https://atomist.com/ "Atomist "
+[atomist]: https://atomist.com/ "Atomist"
 [slack]: https://join.atomist.com/ "Atomist Community Slack"
