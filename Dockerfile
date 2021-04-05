@@ -8,7 +8,7 @@ ENV NPM_CONFIG_LOGLEVEL warn
 ENV SUPPRESS_NO_CONFIG_WARNING true
 
 # Install some common packages
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     git=1:2.27.0-1ubuntu1.1 \
     curl=7.68.0-1ubuntu4.3 \
     wget=1.20.3-1ubuntu1 \
