@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     git=1:2.27.0-1ubuntu1.1 \
     curl=7.68.0-1ubuntu4.3 \
     wget=1.20.3-1ubuntu1 \
-    gnupg=2.2.20-1ubuntu1 \
+    gnupg=2.2.20-1ubuntu1.1 \
     build-essential=12.8ubuntu3 \
     && rm -rf /var/lib/apt/lists/*
 
