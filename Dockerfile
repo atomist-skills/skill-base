@@ -19,8 +19,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install Node and NPM
 RUN apt-get update && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
-    apt-get -y install --no-install-recommends nodejs && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get -y install --no-install-recommends \
+    nodejs \
+    npm \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install latest version of the Atomist CLI
 RUN npm install -g @atomist/skill \
