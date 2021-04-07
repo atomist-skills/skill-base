@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
 # Install Node and NPM
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get -y install \
-    nodejs=14.16.0-deb-1nodesource1 \
+    nodejs=14.16.1-deb-1nodesource1 \
     && rm -rf /var/lib/apt/lists/*
 
 # Install latest version of the Atomist CLI
