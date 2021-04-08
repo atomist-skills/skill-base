@@ -10,7 +10,8 @@ Use the following `FROM` line in your Dockerfile:
 FROM atomist/skill:node14
 ```
 
-The `atomist/docker-base-image-policy` can pin the `FROM` to latest digests for this tag
+The `atomist/docker-base-image-policy` can pin the `FROM` to latest digests for
+this tag
 
 ---
 
