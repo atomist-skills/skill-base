@@ -2,7 +2,7 @@ FROM ubuntu@sha256:54bb6cbe5bfa4c5741fc8baa547dc95cf3fdbd5c55a5ed4784fed077e0bf9
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-LABEL maintainer="Atomist <docker@atomist.com>
+LABEL maintainer="Atomist <docker@atomist.com>"
 
 # ENV VARs needed for Node.js
 ENV BLUEBIRD_WARNINGS 0
