@@ -2,13 +2,6 @@ FROM ubuntu@sha256:54bb6cbe5bfa4c5741fc8baa547dc95cf3fdbd5c55a5ed4784fed077e0bf9
 
 LABEL maintainer="Atomist <docker@atomist.com>"
 
-# ENV VARs needed for Node.js
-ENV BLUEBIRD_WARNINGS 0
-ENV NODE_ENV production
-ENV NODE_NO_WARNINGS 1
-ENV NPM_CONFIG_LOGLEVEL warn
-ENV SUPPRESS_NO_CONFIG_WARNING true
-
 # Install some common packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl=7.68.0-1ubuntu4.3 \
@@ -26,6 +19,12 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+# ENV VARs needed for Node.js
+ENV BLUEBIRD_WARNINGS 0
+ENV NODE_ENV production
+ENV NODE_NO_WARNINGS 1
+ENV NPM_CONFIG_LOGLEVEL warn
+ENV SUPPRESS_NO_CONFIG_WARNING true
 
 # Install latest version of the Atomist CLI
 RUN npm install -g @atomist/skill@0.9.1 \
