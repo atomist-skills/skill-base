@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get clean -y && \
     rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Install Node and NPM
+# Install Node.js and NPM
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && \
     apt-get install -y curl=7.68.0-1ubuntu4.3 && \
@@ -29,7 +29,8 @@ ENV SUPPRESS_NO_CONFIG_WARNING true
 # Install latest version of the Atomist CLI
 RUN npm install -g @atomist/skill@0.9.1 \
     && rm -rf /root/.npm/
-    
+ 
+# Set working directory for container skills 
 WORKDIR "/atm/home"
 
 # Define the entrypoint
