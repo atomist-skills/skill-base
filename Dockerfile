@@ -8,6 +8,12 @@ RUN apt-get update && \
     apt-get clean -y && \
     rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Install build-essential
+RUN apt-get update && \
+    apt-get install -y build-essential=12.8ubuntu3 && \
+    apt-get clean -y && \
+    rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 # Install Node.js and NPM
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && \
