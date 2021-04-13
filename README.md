@@ -11,7 +11,7 @@ FROM atomist/skill:node14
 ```
 
 The `atomist/docker-base-image-policy` can pin the `FROM` to latest digests for
-this tag
+this tag.
 
 ---
 
