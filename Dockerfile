@@ -4,14 +4,14 @@ LABEL maintainer="Atomist <docker@atomist.com>"
 
 # Install Git
 RUN apt-get update && \
-    apt-get install -y git=1:2.27.0-1ubuntu1.1 && \
+    apt-get install -y git=1:2.30.2-1ubuntu1 && \
     apt-get clean -y && \
     rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Node.js and NPM
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && \
-    apt-get install -y curl=7.68.0-1ubuntu4.3 && \
+    apt-get install -y curl=7.74.0-1ubuntu2 && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y nodejs=14.16.1-deb-1nodesource1 && \
     apt-get remove -y curl && \
@@ -36,9 +36,3 @@ WORKDIR "/atm/home"
 # Define the entrypoint
 ENTRYPOINT ["atm-skill"]
 CMD ["help"]
-
-# Temporary fix CVE-2021-20305
-RUN apt-get update && \
-    apt-get install -y libhogweed6=3.6-2ubuntu0.1 libnettle8=3.6-2ubuntu0.1 && \
-    apt-get clean -y && \
-    rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
