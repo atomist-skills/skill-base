@@ -21,11 +21,11 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # ENV VARs needed for Node.js
-ENV BLUEBIRD_WARNINGS 0 \
- NODE_ENV production \
- NODE_NO_WARNINGS 1 \
- NPM_CONFIG_LOGLEVEL warn \
- SUPPRESS_NO_CONFIG_WARNING true
+ENV BLUEBIRD_WARNINGS=0 \
+ NODE_ENV=production \
+ NODE_NO_WARNINGS=1 \
+ NPM_CONFIG_LOGLEVEL=warn \
+ SUPPRESS_NO_CONFIG_WARNING=true
 
 # Install latest version of the Atomist CLI
 RUN npm install -g @atomist/skill@0.9.1 \
