@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 # Install Node.js and NPM
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update &&  apt-get install -y \
- curl=7.74.0-1ubuntu2
+ curl=7.74.0-1ubuntu2 \
  build-essential \
  && curl -sL https://deb.nodesource.com/setup_14.x | bash - \ 
  && apt-get install -y nodejs \ 
