@@ -4,15 +4,15 @@ LABEL maintainer="Atomist <docker@atomist.com>"
 
 # Install Git
 RUN apt-get update && apt-get install -y \ 
- git=1:2.30.2-1ubuntu1 \
+ git \
  && apt-get clean -y \
  && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Node.js and NPM
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && apt-get install -y \
- curl=7.74.0-1ubuntu2 \
- build-essential=12.8ubuntu3 \
+ curl \
+ build-essential \
  && curl -sL https://deb.nodesource.com/setup_14.x | bash - \ 
  && apt-get install -y nodejs=14.17.0-deb-1nodesource1 \ 
  && apt-get remove -y curl \
