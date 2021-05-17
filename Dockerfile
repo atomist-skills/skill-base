@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install Node.js and NPM
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+# atomist:apt-source=deb https://deb.nodesource.com/node_14.x hirsute main
 RUN apt-get update && apt-get install -y \
  curl \
  build-essential \
