@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
  curl \
  build-essential \
  && curl -sL https://deb.nodesource.com/setup_14.x | bash - \ 
- && apt-get install -y nodejs=14.17.0-deb-1nodesource1 \ 
+ && apt-get install -y nodejs=14.16.1-deb-1nodesource1 \ 
  && apt-get remove -y curl \
  && apt-get autoremove -y \
  && apt-get clean -y \ 
