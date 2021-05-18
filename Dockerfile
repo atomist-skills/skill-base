@@ -8,8 +8,9 @@ RUN apt-get update && apt-get install -y \
  && apt-get clean -y \
  && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Install Node.js and NPM
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# Install Node.js and NPM
 # atomist:apt-source=deb https://deb.nodesource.com/node_14.x hirsute main
 RUN apt-get update && apt-get install -y \
     build-essential=12.8ubuntu3 \
