@@ -17,8 +17,9 @@ RUN apt-get update && apt-get install -y \
     curl=7.74.0-1ubuntu2 \
  && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
  && apt-get update \
+ && apt-get update \
  && apt-get update && apt-get install -y \
-    nodejs=12.21.0~dfsg-3ubuntu1 \
+    nodejs=14.17.0-deb-1nodesource1 \
  && apt-get remove -y curl \
  && apt-get autoremove -y \
  && apt-get clean -y \
