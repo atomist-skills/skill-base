@@ -33,7 +33,7 @@ ENV BLUEBIRD_WARNINGS=0 \
  SUPPRESS_NO_CONFIG_WARNING=true
 
 # Install latest version of the Atomist CLI
-RUN npm install -g @atomist/skill@0.9.1 \
+RUN npm install -g @atomist/skill@0.11.0 \
  && rm -rf /root/.npm/
  
 # Set working directory for container skills 
