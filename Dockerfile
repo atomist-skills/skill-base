@@ -16,9 +16,6 @@ RUN apt-get update && apt-get install -y \
     build-essential=12.8ubuntu3 \
     curl=7.74.0-1ubuntu2 \
  && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
- && apt-get update \
- && apt-get update \
- && apt-get update \
  && apt-get update && apt-get install -y \
     nodejs=14.17.1-deb-1nodesource1 \
  && apt-get remove -y curl \
