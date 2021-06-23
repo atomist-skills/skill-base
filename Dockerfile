@@ -42,7 +42,7 @@ ENTRYPOINT ["atm-skill"]
 CMD ["help"]
 
 # Fix CVE-2021-3520
-RUN apt-get update && apt-get install -y \
-    liblz4-1=1.9.3-1ubuntu0.1 \
- && apt-get clean -y \
- && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
+#RUN apt-get update && apt-get install -y \
+#    liblz4-1=1.9.3-1ubuntu0.1 \
+# && apt-get clean -y \
+# && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
