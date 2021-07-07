@@ -43,9 +43,6 @@ CMD ["help"]
 
 # Fix CVEs
 RUN apt-get update && apt-get install -y \
-    libgnutls30=3.7.1-3ubuntu1 \
-    libgcrypt20=1.8.7-2ubuntu2 \ 
-    tar=1.34+dfsg-1build1 \
     libhogweed6=3.7-2.1ubuntu1.1 \
     libnettle8=3.7-2.1ubuntu1.1 \
  && apt-get clean -y \
