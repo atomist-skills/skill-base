@@ -41,8 +41,12 @@ WORKDIR "/atm/home"
 ENTRYPOINT ["atm-skill"]
 CMD ["help"]
 
-# Fix CVE-2021-3520
+# Fix CVEs
 RUN apt-get update && apt-get install -y \
-    liblz4-1=1.9.3-1ubuntu0.1 \
+    libgnutls30=3.6.7-4+deb10u7 \
+    libgcrypt20=1.8.4-5+deb10u1 \ 
+    tar=1.29b-2ubuntu0.2 \
+    libhogweed6=3.7-2.1ubuntu1.1 \
+    libnettle8=3.7-2.1ubuntu1.1 \
  && apt-get clean -y \
  && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
