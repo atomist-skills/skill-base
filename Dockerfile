@@ -41,9 +41,3 @@ WORKDIR "/atm/home"
 ENTRYPOINT ["atm-skill"]
 CMD ["help"]
 
-# Fix CVE
-RUN apt-get update && apt-get install -y \
-    libhogweed6=3.7-2.1ubuntu1.1 \
-    libnettle8=3.7-2.1ubuntu1.1 \
- && apt-get clean -y \
- && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
