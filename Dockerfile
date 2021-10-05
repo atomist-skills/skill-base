@@ -1,4 +1,4 @@
-FROM ubuntu:rolling@sha256:44e4ce6defdd88435d6f724b4ed4bfa3dd7796c93012bbe1af16da4a7479a006
+FROM ubuntu:rolling@sha256:cc6f342e3aad515ae49ec9355d852bbba50c3d63e57786438ec36d8989b72f91
 
 LABEL maintainer="Atomist <docker@atomist.com>"
 
