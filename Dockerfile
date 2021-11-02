@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     curl=7.74.0-1ubuntu2.3 \
  && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
  && apt-get update && apt-get install -y \
-    nodejs \
+    nodejs=16.13.0-deb-1nodesource1 \
  && apt-get remove -y curl \
  && apt-get autoremove -y \
  && apt-get clean -y \
