@@ -7,7 +7,7 @@ Docker base image for JavaScript based Atomist skills.
 Use the following `FROM` line in your Dockerfile:
 
 ```
-FROM atomist/skill:node14
+FROM atomist/skill:node16
 ```
 
 The `atomist/docker-base-image-policy` can pin the `FROM` to latest digests of
