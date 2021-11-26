@@ -1,4 +1,4 @@
-FROM ubuntu:rolling
+FROM ubuntu:rolling@sha256:9a5cc8359b220b9414e4dc6ec992f867b33f864c560a1e198fb833f98b8f7f3c
 LABEL maintainer="Atomist <docker@atomist.com>"
 
 # Install Git
