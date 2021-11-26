@@ -1,6 +1,6 @@
 # `@atomist/skill-base`
 
-Docker base image for JavaScript based Atomist skills.
+Docker base image for JavaScript/TypeScript based Atomist skills.
 
 ## Usage
 
