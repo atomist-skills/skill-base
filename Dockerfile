@@ -1,11 +1,10 @@
 FROM alpine:3.15
 LABEL maintainer="Atomist <docker@atomist.com>"
 
-ARG GIT_VERSION="2.34.1-r0"
-ARG NODE_VERSION="16.13.0-r0"
-ARG CURL_VERSION="7.80.0-r0"
-ARG UNZIP_VERSION="6.0-r9"
-#ARG NPM_VERSION="8.1.3-r0"
+ENV GIT_VERSION="2.34.1-r0" \
+ NODE_VERSION="16.13.0-r0" \
+ CURL_VERSION="7.80.0-r0" \
+ UNZIP_VERSION="6.0-r9"
 
 # Install common dependencies 
 RUN apk add --no-cache \
