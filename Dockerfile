@@ -1,26 +1,18 @@
-FROM ubuntu:rolling@sha256:cc8f713078bfddfe9ace41e29eb73298f52b2c958ccacd1b376b9378e20906ef
+FROM alpine:3.15
 LABEL maintainer="Atomist <docker@atomist.com>"
 
-# Install Git
-RUN apt-get update && apt-get install -y \
-    git=1:2.32.0-1ubuntu1 \
- && apt-get clean -y \
- && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ARG GIT_VERSION="2.34.1-r0"
+ARG NODE_VERSION="16.13.0-r0"
+ARG NPM_VERSION="8.1.3-r0"
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+# Install Git
+RUN apk add --no-cache \
+ git=$GIT_VERSION 
 
 # Install Node.js and NPM
-# atomist:apt-source=deb https://deb.nodesource.com/node_16.x hirsute main
-RUN apt-get update && apt-get install -y \
-    build-essential=12.9ubuntu2 \
-    curl=7.74.0-1.3ubuntu2 \
- && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
- && apt-get update && apt-get install -y \
-    nodejs=16.13.0-deb-1nodesource1 \
- && apt-get remove -y curl \
- && apt-get autoremove -y \
- && apt-get clean -y \
- && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk add --no-cache \
+ nodejs=$NODE_VERSION \
+ npm=$NPM_VERSION
 
 # ENV VARs needed for Node.js
 ENV BLUEBIRD_WARNINGS=0 \
