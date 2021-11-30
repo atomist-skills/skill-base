@@ -13,6 +13,10 @@ FROM atomist/skill:alpine_3.15-node_16
 The `atomist/docker-base-image-policy` can pin the `FROM` to latest digests of
 this tag.
 
+Deprecated tags:
+
+* `node16`
+
 ---
 
 Created by [Atomist][atomist]. Need Help? [Join our Slack workspace][slack].
