@@ -15,7 +15,7 @@ this tag.
 
 Deprecated tags:
 
-* `node16`
+-   `node16`
 
 ---
 
