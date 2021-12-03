@@ -12,7 +12,7 @@ RUN apk add --no-cache \
  
 # Install Node.js
 RUN apk add --no-cache \
- nodejs=16.13.0-r0
+ nodejs=16.13.1-r0
 
 # ENV VARs needed for Node.js
 ENV BLUEBIRD_WARNINGS=0 \
