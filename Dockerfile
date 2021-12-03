@@ -8,10 +8,13 @@ ENV GIT_VERSION="2.34.1-r0" \
 
 # Install common dependencies 
 RUN apk add --no-cache \
- git=$GIT_VERSION \
  curl=$CURL_VERSION \
  unzip=$UNZIP_VERSION
 
+# Install Git
+RUN apk add --no-cache \
+ git=$GIT_VERSION 
+ 
 # Install Node.js
 RUN apk add --no-cache \
  nodejs=$NODE_VERSION
