@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine:3
 
 LABEL maintainer="Atomist <docker@atomist.com>"
 
