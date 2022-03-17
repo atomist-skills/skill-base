@@ -24,3 +24,4 @@ ENV BLUEBIRD_WARNINGS=0 \
 
 # Set working directory for container skills 
 WORKDIR "/atm/home"
+
