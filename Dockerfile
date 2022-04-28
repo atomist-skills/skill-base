@@ -9,7 +9,7 @@ RUN apk add --no-cache \
 
 # Install Git
 RUN apk add --no-cache \
- git=2.34.1-r0 
+ git=2.34.2-r0 
  
 # Install Node.js
 RUN apk add --no-cache \
