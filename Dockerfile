@@ -4,7 +4,7 @@ LABEL maintainer="Atomist <docker@atomist.com>"
 
 # Install common dependencies 
 RUN apk add --no-cache \
- curl=7.80.0-r0 \
+ curl=7.80.0-r1 \
  unzip=6.0-r9
 
 # Install Git
