@@ -7,14 +7,14 @@ RUN apk add --no-cache \
  curl=7.83.1-r1 \
  unzip=6.0-r9
 
-# Install Git
-RUN apk add --no-cache \
- git=2.36.1-r0 
- 
 # Install Node.js
 RUN apk add --no-cache \
  nodejs=16.15.0-r1
 
+# Install Git
+RUN apk add --no-cache \
+ git=2.36.1-r0 
+ 
 # ENV VARs needed for Node.js
 ENV BLUEBIRD_WARNINGS=0 \
  NODE_ENV=production \
