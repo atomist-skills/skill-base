@@ -1,19 +1,19 @@
-FROM alpine:3.15@sha256:4edbd2beb5f78b1014028f4fbb99f3237d9561100b6881aabbf5acce2c4f9454
+FROM alpine:3.16
 
 LABEL maintainer="Atomist <docker@atomist.com>"
 
 # Install common dependencies 
 RUN apk add --no-cache \
- curl=7.80.0-r1 \
+ curl=7.83.1-r1 \
  unzip=6.0-r9
 
 # Install Git
 RUN apk add --no-cache \
- git=2.34.2-r0 
+ git=2.36.1-r0 
  
 # Install Node.js
 RUN apk add --no-cache \
- nodejs=16.14.2-r0
+ nodejs=16.15.0-r1
 
 # ENV VARs needed for Node.js
 ENV BLUEBIRD_WARNINGS=0 \
