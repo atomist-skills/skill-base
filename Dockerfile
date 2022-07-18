@@ -2,10 +2,14 @@ FROM alpine:3.16@sha256:686d8c9dfa6f3ccfc8230bc3178d23f84eeaf7e457f36f271ab1acc5
 
 LABEL maintainer="Atomist <docker@atomist.com>"
 
-# Install common dependencies 
+# Update some base packages to fix CVEs
 RUN apk add --no-cache \
  libssl1.1=1.1.1q-r0 \
  libcrypto1.1=1.1.1q-r0 \
+ busybox=1.35.0-r15
+
+# Install common dependencies 
+RUN apk add --no-cache \
  curl=7.83.1-r2 \
  unzip=6.0-r9
 
