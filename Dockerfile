@@ -5,7 +5,7 @@ LABEL maintainer="Atomist <docker@atomist.com>"
 # Install common dependencies 
 RUN apk add --no-cache \
  libssl1.1=1.1.1q-r0 \
- libcrypto1.1=libssl1.1 \
+ libcrypto1.1=1.1.1q-r0 \
  curl=7.83.1-r2 \
  unzip=6.0-r9
 
