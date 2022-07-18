@@ -18,6 +18,7 @@ env:
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: atomist/skill
+  SHA: ${{ github.event.pull_request.head.sha || github.event.pull_request.head.sha }}
 
 jobs:
   build:
@@ -31,13 +32,9 @@ jobs:
 
     steps:
       - name: Checkout repository
-        if: github.event_name != 'pull_request'
-        uses: actions/checkout@v3
-      - name: Checkout repository for PR
-        if: github.event_name == 'pull_request'
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ env.SHA }}
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
@@ -70,6 +67,8 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=alpine_3.16-node_16
+          labels: |
+            org.opencontainers.image.revision=${{ env.SHA }}
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
