@@ -18,7 +18,7 @@ env:
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: atomist/skill
-  SHA: ${{ github.event.push.after }}
+  SHA: ${{ github.event.pull_request.head.sha || github.event.after }}
 
 jobs:
   build:
