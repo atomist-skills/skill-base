@@ -4,12 +4,12 @@ LABEL maintainer="Atomist <docker@atomist.com>"
 
 # Install common dependencies
 RUN apk add --no-cache \
- curl=7.84.0-r0 \
- unzip=6.0-r9
+ curl=7.84.0-r2 \
+ unzip=6.0-r10
 
 # Install Node.js
 RUN apk add --no-cache \
- nodejs=16.16.0-r0
+ nodejs=16.16.0-r1
 
 # Install Git
 RUN apk add --no-cache \
