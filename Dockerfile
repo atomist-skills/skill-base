@@ -13,7 +13,7 @@ RUN apk add --no-cache \
 
 # Install Git
 RUN apk add --no-cache \
- git=2.37.1-r0
+ git=2.37.1-r1
  
 # ENV VARs needed for Node.js
 ENV BLUEBIRD_WARNINGS=0 \
