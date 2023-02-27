@@ -9,7 +9,7 @@ RUN apk add --no-cache \
 
 # Install Node.js
 RUN apk add --no-cache \
- nodejs=16.16.0-r1
+ nodejs=18.14.2-r0
 
 # Install Git
 RUN apk add --no-cache \
