@@ -4,7 +4,7 @@ LABEL maintainer="Atomist <docker@atomist.com>"
 
 # Install common dependencies
 RUN apk add --no-cache \
- curl=7.87.0-r3 \
+ curl=7.88.1-r1 \
  unzip=6.0-r13
 
 # Install Node.js
