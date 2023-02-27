@@ -1,4 +1,4 @@
-FROM alpine:edge@sha256:69361f5f421bb47db6f2f6baf84ab50b8f7c9b209f8376048dda955535224be8
+FROM alpine:edge@sha256:5bd9939b4140caa8c716499e53438053b4e1aa872a170f4399ec71c00e23b835
 
 LABEL maintainer="Atomist <docker@atomist.com>"
 
