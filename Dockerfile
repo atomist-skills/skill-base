@@ -4,16 +4,16 @@ LABEL maintainer="Atomist <docker@atomist.com>"
 
 # Install common dependencies
 RUN apk add --no-cache \
- curl=7.88.1-r1 \
- unzip=6.0-r13
+ curl=8.4.0-r1 \
+ unzip=6.0-r14
 
 # Install Node.js
 RUN apk add --no-cache \
- nodejs=18.14.2-r0
+ nodejs=18.18.0-r0
 
 # Install Git
 RUN apk add --no-cache \
- git=2.39.2-r0
+ git=2.42.0-r0
  
 # ENV VARs needed for Node.js
 ENV BLUEBIRD_WARNINGS=0 \
