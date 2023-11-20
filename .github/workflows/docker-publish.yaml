@@ -66,7 +66,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=raw,value=alpine_edge-node_18
+            type=raw,value=alpine_3.18-node_18
           labels: |
             org.opencontainers.image.revision=${{ env.SHA }}
 
@@ -79,7 +79,5 @@ jobs:
           platforms: "linux/amd64,linux/arm64"
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          load: ${{ github.event_name == 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
